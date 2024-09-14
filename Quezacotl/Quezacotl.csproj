@@ -1,17 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{578A7CEC-FC7C-4A46-90E6-C2174768577F}</ProjectGuid>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Quezacotl</RootNamespace>
-    <AssemblyName>Quezacotl</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -27,264 +17,26 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AboutBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AboutBox.Designer.cs">
-      <DependentUpon>AboutBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FF8Text.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HexUpDown.cs">
+    <Compile Update="HexUpDown.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="HexUpDownB.cs">
+    <Compile Update="HexUpDownB.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="InitWorker.cs" />
-    <Compile Include="ListViewEx.cs">
+    <Compile Update="ListViewEx.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SplashForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SplashForm.Designer.cs">
-      <DependentUpon>SplashForm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="AboutBox.resx">
-      <DependentUpon>AboutBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="SplashForm.resx">
-      <DependentUpon>SplashForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\char0.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\char1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\char2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\char3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\char4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\char5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\char6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\char7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gf0.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gf1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gf2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gf3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gf4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gf5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gf6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gf7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gf8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gf9.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gf10.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gf11.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gf12.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gf13.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gf14.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gf15.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Information-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Open-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Save-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
-    <None Include="Resources\weapon27.png" />
-    <None Include="Resources\weapon26.png" />
-    <None Include="Resources\weapon25.png" />
-    <None Include="Resources\weapon24.png" />
-    <None Include="Resources\weapon23.png" />
-    <None Include="Resources\weapon22.png" />
-    <None Include="Resources\weapon21.png" />
-    <None Include="Resources\weapon20.png" />
-    <None Include="Resources\weapon19.png" />
-    <None Include="Resources\weapon18.png" />
-    <None Include="Resources\weapon17.png" />
-    <None Include="Resources\weapon16.png" />
-    <None Include="Resources\weapon15.png" />
-    <None Include="Resources\weapon14.png" />
-    <None Include="Resources\weapon13.png" />
-    <None Include="Resources\weapon12.png" />
-    <None Include="Resources\weapon11.png" />
-    <None Include="Resources\weapon10.png" />
-    <None Include="Resources\weapon09.png" />
-    <None Include="Resources\weapon08.png" />
-    <None Include="Resources\weapon07.png" />
-    <None Include="Resources\weapon06.png" />
-    <None Include="Resources\weapon05.png" />
-    <None Include="Resources\weapon04.png" />
-    <None Include="Resources\weapon03.png" />
-    <None Include="Resources\weapon02.png" />
-    <None Include="Resources\weapon01.png" />
-    <None Include="Resources\weapon00.png" />
-    <None Include="Resources\List_Items.txt" />
-    <None Include="Resources\loading font.png" />
-    <None Include="Resources\List_Magic.txt" />
-    <None Include="Resources\info_big.png" />
-    <None Include="Resources\angelo.png" />
-    <None Include="Resources\char11.png" />
-    <None Include="Resources\char10.png" />
-    <None Include="Resources\char9.png" />
-    <None Include="Resources\char8.png" />
-    <None Include="Resources\about font.png" />
-    <None Include="Resources\quezacotl.png" />
-    <None Include="Resources\objet6.png" />
-    <None Include="Resources\objet5.png" />
-    <None Include="Resources\objet4.png" />
-    <None Include="Resources\objet3.png" />
-    <None Include="Resources\objet2.png" />
-    <None Include="Resources\objet1.png" />
-    <None Include="Resources\objet0.png" />
-    <None Include="Resources\mtl12.png" />
-    <None Include="Resources\mtl11.png" />
-    <None Include="Resources\mtl10.png" />
-    <None Include="Resources\mtl09.png" />
-    <None Include="Resources\mtl08.png" />
-    <None Include="Resources\mtl07.png" />
-    <None Include="Resources\mtl06.png" />
-    <None Include="Resources\mtl05.png" />
-    <None Include="Resources\mtl04.png" />
-    <None Include="Resources\mtl03.png" />
-    <None Include="Resources\mtl02.png" />
-    <None Include="Resources\mtl01.png" />
-    <None Include="Resources\mtl00.png" />
-    <None Include="Resources\gf16.png" />
-    <None Include="Resources\dfs-mtl.png" />
-    <None Include="Resources\dfs-ele.png" />
-    <None Include="Resources\carte.png" />
-    <None Include="Resources\capacity5.png" />
-    <None Include="Resources\capacity4.png" />
-    <None Include="Resources\capacity3.png" />
-    <None Include="Resources\capacity2.png" />
-    <None Include="Resources\capacity1.png" />
-    <None Include="Resources\capacity0.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6">
@@ -298,12 +50,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+  </ItemGroup>
 </Project>
